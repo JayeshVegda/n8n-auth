@@ -152,7 +152,7 @@ function Dashboard() {
               size="lg"
               fullWidth
               component="a"
-              href="https://github.com"
+              href="https://github.com/jayeshvegda"
               target="_blank"
             >
               My GitHub
@@ -164,7 +164,7 @@ function Dashboard() {
               size="lg"
               fullWidth
               component="a"
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/jayeshvegda/"
               target="_blank"
             >
               My LinkedIn
