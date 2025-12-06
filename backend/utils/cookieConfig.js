@@ -2,9 +2,10 @@ export const getCookieOptions = () => {
     const isProduction = process.env.NODE_ENV === 'production';
     return {
         httpOnly: true,
-        secure: isProduction,
-        maxAge: 7 * 24 * 60 * 60 * 1000,
-        sameSite: isProduction ? 'none' : 'none'
+        secure: isProduction, 
+        sameSite: isProduction ? 'none' : 'lax',
+        maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+        domain: process.env.COOKIE_DOMAIN || undefined, 
     };
 };
 
@@ -13,8 +14,7 @@ export const getClearCookieOptions = () => {
     return {
         httpOnly: true,
         secure: isProduction,
-        maxAge: 7 * 24 * 60 * 60 * 1000,
-        sameSite: isProduction ? 'none' : 'none'
+        sameSite: isProduction ? 'none' : 'lax',
+        domain: process.env.COOKIE_DOMAIN || undefined,
     };
 };
-
