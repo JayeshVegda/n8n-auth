@@ -1,0 +1,20 @@
+export const getCookieOptions = () => {
+    const isProduction = process.env.NODE_ENV === 'production';
+    return {
+        httpOnly: true,
+        secure: isProduction,
+        maxAge: 7 * 24 * 60 * 60 * 1000,
+        sameSite: isProduction ? 'none' : 'none'
+    };
+};
+
+export const getClearCookieOptions = () => {
+    const isProduction = process.env.NODE_ENV === 'production';
+    return {
+        httpOnly: true,
+        secure: isProduction,
+        maxAge: 7 * 24 * 60 * 60 * 1000,
+        sameSite: isProduction ? 'none' : 'none'
+    };
+};
+
